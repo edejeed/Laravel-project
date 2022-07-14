@@ -1,7 +1,9 @@
 import React from "react";
-import ReactDOM from "react-dom";
-import Login from "./components/pages/auth/login";
+import ReactDOM from "react-dom/client";
+import Login from './components/pages/auth/login'
+import './bootstrap';
 
+const root = ReactDOM.createRoot(document.getElementById("app"));
 
 const Index = () => {
     return(
@@ -11,11 +13,5 @@ const Index = () => {
     )
 }
 
-// export default Index;
+root.render(<Index/>)
 
-if (document.getElementById("app")) {
-    ReactDOM.render(
-        <Index />,
-        document.getElementById("app")
-    )
-}
